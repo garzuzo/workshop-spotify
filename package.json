@@ -4,7 +4,8 @@
   "description": "This is a spotify challenge",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -t 5000"
+    "test": "npm run lint && mocha -t 5000 --reporter mochawesome --reporter-options reportDir=report,reportFilename=SpotifyTesting",
+    "lint": "eslint ./test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,10 @@
     "mocha": "^6.2.0"
   },
   "dependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mochawesome": "^4.1.0",
     "superagent": "^5.1.0",
     "superagent-promise": "^1.1.0"
   }
