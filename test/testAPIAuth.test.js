@@ -14,8 +14,8 @@ describe('Spotify Api Test', () => {
         .send('grant_type=client_credentials')
         .set('User-Agent', 'agent');
 
-
       expect(response.status).to.equal(statusCode.OK);
+      expect(response.body.access_token).to.exist;
     });
   });
 });
