@@ -1,6 +1,7 @@
 const agent = require('superagent');
 const statusCode = require('http-status-codes');
 const { expect } = require('chai');
+
 const urlBase = 'https://accounts.spotify.com/api/token';
 const authEncoded = Buffer.from(`${process.env.client_id}:${process.env.client_secret}`).toString('base64');
 const urlSearch = 'https://api.spotify.com/v1/search';
