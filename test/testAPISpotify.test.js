@@ -37,6 +37,7 @@ describe('Spotify Api Test', () => {
         .set('Authorization', `Bearer ${response.body.access_token}`)
         .query(reqBody)
         .set('User-Agent', 'agent');
+
       expect(search.status).to.equal(statusCode.OK);
       expect(search.body.tracks.items).to.have.lengthOf(20);
     });
